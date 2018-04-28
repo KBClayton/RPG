@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>RPG</title>
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+  <script src="assets/javascript/java.js"></script>
+
+  <meta name="viewport" content="width=device-width", initial-scale="1.0">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1>Battletech RPG</h1>
+            </div>
+            <div class="col-lg-3" id="char1">
+                    <div class="card" style="width: 18rem;">
+                            <img class="card-img-top" src="assets/images/raven.gif" alt="Card image cap">
+                            <div class="card-body">
+                              <h5 class="card-title">Raven</h5>
+                              <p class="card-text">HP: <span id="htext1">100</span></p>
+                            </div>
+                    </div>
+                
+            </div>
+            <div class="col-lg-3" id="char2">
+                    <div class="card"  style="width: 18rem;">
+                            <img class="card-img-top" src="assets/images/griffin.jpg" alt="Card image cap">
+                            <div class="card-body">
+                              <h5 class="card-title">Griffin</h5>
+                              <p class="card-text">HP: <span id="htext2">120</span></p>
+                            </div>
+                    </div>
+                
+            </div>
+            <div class="col-lg-3" id="char3">
+                    <div class="card" style="width: 18rem;">
+                            <img class="card-img-top" src="assets/images/catapult.png" alt="Card image cap">
+                            <div class="card-body">
+                              <h5 class="card-title">Catapult</h5>
+                              <p class="card-text">HP: <span id="htext3">150</span></p>
+                            </div>
+                    </div>
+            </div>
+            <div class="col-lg-3" id="char4">
+                    <div class="card" style="width: 18rem;">
+                            <img class="card-img-top" src="assets/images/stalker.png" alt="Card image cap">
+                            <div class="card-body">
+                              <h5 class="card-title">Stalker</h5>
+                              <p class="card-text">HP: <span id="htext4">180</span></p>
+                            </div>
+                    </div>
+                
+            </div>
+            <div class="col-lg-12">
+                    <h3><span id="character">Choose a mech</span></h3>
+            </div>
+            <div class="col-lg-3" id="echar1">
+                    <div class="card" style="width: 18rem;">
+                            <img class="card-img-top" src="assets/images/raven.gif" alt="Card image cap">
+                            <div class="card-body">
+                              <h5 class="card-title">Raven</h5>
+                              <p class="card-text">HP: <span id="ehtext1">100</span></p>
+                            </div>
+                    </div>
+                
+            </div>
+            <div class="col-lg-3" id="echar2">
+                    <div class="card" style="width: 18rem;">
+                            <img class="card-img-top" src="assets/images/griffin.jpg" alt="Card image cap">
+                            <div class="card-body">
+                              <h5 class="card-title">Griffin</h5>
+                              <p class="card-text">HP: <span id="ehtext2">120</span></p>
+                            </div>
+                    </div>
+                
+            </div>
+            <div class="col-lg-3" id="echar3">
+                    <div class="card" style="width: 18rem;">
+                            <img class="card-img-top" src="assets/images/catapult.png" alt="Card image cap">
+                            <div class="card-body">
+                              <h5 class="card-title">Catapult</h5>
+                              <p class="card-text">HP: <span id="ehtext3">150</span></p>
+                            </div>
+                    </div>
+                
+            </div>
+            <div class="col-lg-3" id="echar4">
+                    <div class="card" style="width: 18rem;">
+                            <img class="card-img-top" src="assets/images/stalker.png" alt="Card image cap">
+                            <div class="card-body">
+                              <h5 class="card-title">Stalker</h5>
+                              <p class="card-text">HP: <span id="ehtext4">180</span></p>
+                            </div>
+                    </div>
+            </div>
+            <div class="col-lg-12">
+                    <h3><span id="echaracter"></span></h3>
+            </div>
+            <div class="col-lg-12">
+                    <button type="button" class="btn btn-danger" id="atkbtn">Attack</button>
+                    <button type="button" class="btn btn-primary" id="rbtn">Reset</button>
+            </div>
+        </div>
+    </div>
+
+
+</body>

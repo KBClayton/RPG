@@ -1,0 +1,25 @@
+@font-face {
+    font-family: "btech";
+    src:url("../other/BTLogo_old.ttf");
+}
+
+
+body{
+    font-family: 'btech', 'Times New Roman', Times, serif;
+    background: url(../images/back.jpg);
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+
+h1{
+    background-color: white;
+    border: solid;
+    border-color: teal;
+    border-width: 5px;
+}
+h3{
+    background-color: white;
+    border: solid;
+    border-color: teal;
+    border-width: 5px;
+}
