@@ -1,17 +1,6 @@
 $(document).ready(function() {
-    var pcharc1=$("#char1");
-    var pcharc2=$("#char2");
-    var pcharc3=$("#char3");
-    var pcharc4=$("#char4");
-    var encharc1=$("#echar1");
-    var encharc2=$("#echar2");
-    var encharc3=$("#echar3");
-    var encharc4=$("#echar4");
     var ctext=$("#character");
     var etext=$("#echaracter");
-
-    
-
 
     var pchar = {
         notchosen: true,
@@ -30,9 +19,6 @@ $(document).ready(function() {
 
     var game = {
         fdisplay: function(){
-            console.log(echar.defeated);
-            console.log(echar.hitp);
-            console.log("echar defeated: "+echar.defeated.length);
             switch(echar.defeated[0]){
                 case "1":    $("#htext1").text(pchar.hitp);
                                 break;
@@ -58,6 +44,7 @@ $(document).ready(function() {
 
 
         },
+
         ehide: function(){
             document.getElementById("echar1").style.display = 'none';
             document.getElementById("echar2").style.display = 'none';
@@ -126,7 +113,6 @@ $(document).ready(function() {
                                 break;
                     default: break;
                 };
-                console.log(wclass)
                 pchar.notchosen=false;
                 ctext.text("Your mech");
                 etext.text("Choose an enemy");
@@ -137,7 +123,6 @@ $(document).ready(function() {
         },
 
         echoosechar: function(eclass){
-            console.log("in echoosechar")
             if(echar.notchosen){
                 switch(eclass){
                     case "1":   document.getElementById("echar2").style.display = 'none';
@@ -183,18 +168,24 @@ $(document).ready(function() {
                 return;
             }
         },
+
         fight: function(){
             if(echar.notchosen==false && echar.hitp>0 && pchar.hitp>0){
                 echar.hitp=echar.hitp-pchar.attk;
                 pchar.hitp=pchar.hitp-echar.attk;
                 pchar.attk+=pchar.battk;
-                console.log(pchar.hitp+"   "+echar.hitp)
                 this.fdisplay();
             }
             this.winloss();
         },
+        
         winloss: function(){
-            if (echar.hitp<=0){
+            if(pchar.hitp<=0){
+                alert("You lose");
+                this.reset();
+                return;
+            }
+            else  if (echar.hitp<=0){
                 if(echar.defeated.length==4){
                     alert("You win");
                     this.reset();
@@ -207,17 +198,12 @@ $(document).ready(function() {
                     return;
                 }
             }
-            else if(pchar.hitp<=0){
-                alert("You lose");
-                this.reset();
-                return;
-
-            }
             else{
                 return;
             }
 
         },
+
         reset: function(){
             echar.notchosen=true;
             echar.hitp=0;
