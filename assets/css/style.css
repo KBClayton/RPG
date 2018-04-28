@@ -23,3 +23,7 @@ h3{
     border-color: teal;
     border-width: 5px;
 }
+.spacer {
+    width: 600px;
+    height: 20px;
+}
